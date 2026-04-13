@@ -1,0 +1,18 @@
+{
+  "name": "calculator-tdd",
+  "version": "1.0.0",
+  "description": "Simple calculator built with TDD using Jest",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+
+  }
+}
