@@ -1,6 +1,6 @@
-# Landing Page Collection
+# Premium Frontend Showcase
 
-This repository contains a collection of modern, responsive landing pages built with HTML and CSS. Each project showcases unique design patterns and responsive layouts.
+A curated collection of high-fidelity, responsive web experiences. This repository exhibits modern design principles, fluid interactivity, and pixel-perfect layouts crafted with HTML, CSS, and JavaScript.
 
 ## Projects
 
@@ -21,6 +21,12 @@ A minimalist coming-soon page with sophisticated typography, a clean layout, and
 
 **Preview:**
 ![Base Apparel Design](./BaseApparel/public/Design.png)
+
+### 4. Calculator
+A fully functional calculator built using Test-Driven Development (TDD). It supports core arithmetic operations, keyboard navigation, and features a clean, professional dark-mode UI.
+
+**Preview:**
+![Calculator Design](./Calculator/public/calculator.png)
 
 ## Key Features
 - **Responsive Design**: All landing pages are fully optimized for both desktop and mobile viewports.
