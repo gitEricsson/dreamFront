@@ -1,4 +1,4 @@
-# TDD Calculator
+# Calculator
 
 A simple calculator built using Test-Driven Development (TDD) methodology with Jest testing framework.
 
@@ -117,7 +117,3 @@ This project demonstrates:
 ## 📄 License
 
 MIT License - Feel free to use this for learning purposes!
-
----
-
-Built with ❤️ using TDD methodology
