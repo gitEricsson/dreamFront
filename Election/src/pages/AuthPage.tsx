@@ -19,7 +19,7 @@ export function AuthPage() {
 
   useEffect(() => {
     if (userState.current) navigate(from, { replace: true });
-  }, [from, navigate, userState.current]);
+  }, [from, navigate, userState]);
 
   async function onRegister(e: FormEvent) {
     e.preventDefault();
@@ -38,7 +38,7 @@ export function AuthPage() {
       <div className="authShell">
         <section className="card authCard">
           <div className="cardHeader">
-            <h2 className="cardTitle">Access</h2>
+            <h2 className="cardTitle">Auth</h2>
             <div className="btnRow">
               <button
                 className={`btn ${mode === 'register' ? 'btnPrimary' : ''}`}
@@ -52,7 +52,7 @@ export function AuthPage() {
                 type="button"
                 onClick={() => setMode('load')}
               >
-                Load by Email
+                Sign in
               </button>
             </div>
           </div>
@@ -69,7 +69,7 @@ export function AuthPage() {
                 Welcome
               </div>
               <div className="muted">
-                Register a voter or load an existing voter by email.
+                Register a voter or sign an existing voter in by email.
               </div>
             </div>
 
@@ -110,10 +110,6 @@ export function AuthPage() {
                 >
                   Continue
                 </button>
-                <div className="helpText">
-                  We store the selected voter locally so you can vote without
-                  re-entering the ID each time.
-                </div>
               </form>
             ) : (
               <form className="stack" onSubmit={onLookup}>
@@ -137,10 +133,6 @@ export function AuthPage() {
                 >
                   Continue
                 </button>
-                <div className="helpText">
-                  Tip: the voter will be remembered on this device until you
-                  logout.
-                </div>
               </form>
             )}
           </div>

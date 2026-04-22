@@ -27,7 +27,7 @@ export const fetchWinner = createAsyncThunk<
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     let message = 'Failed to load winner';
-    if (err.response?.status === 400) {
+    if (err.response?.status === 400 || err.response?.status === 403) {
       const errorMsg = err.response.data?.error || err.response.data;
       message = errorMsg || message;
     } else if (err instanceof Error) {
@@ -47,7 +47,7 @@ export const fetchElectionResults = createAsyncThunk<
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     let message = 'Failed to load election results';
-    if (err.response?.status === 400) {
+    if (err.response?.status === 400 || err.response?.status === 403) {
       const errorMsg = err.response.data?.error || err.response.data;
       message = errorMsg || message;
     } else if (err instanceof Error) {

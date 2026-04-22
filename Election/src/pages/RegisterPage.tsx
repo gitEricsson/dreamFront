@@ -35,7 +35,7 @@ export function RegisterPage() {
       <div className="pageHeader">
         <h1>Voter</h1>
         <div className="subtitle">
-          Register a user or load an existing one by email.
+          Register a voter or sign an existing voter in by email.
         </div>
       </div>
 

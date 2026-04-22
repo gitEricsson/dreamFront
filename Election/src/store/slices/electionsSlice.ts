@@ -25,7 +25,7 @@ export const fetchElections = createAsyncThunk<Election[]>(
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       let message = 'Failed to load elections';
-      if (err.response?.status === 400) {
+      if (err.response?.status === 400 || err.response?.status === 403) {
         const errorMsg = err.response.data?.error || err.response.data;
         message = errorMsg || message;
       } else if (err instanceof Error) {
@@ -45,7 +45,7 @@ export const createElection = createAsyncThunk<Election, CreateElectionInput>(
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       let message = 'Failed to create election';
-      if (err.response?.status === 400) {
+      if (err.response?.status === 400 || err.response?.status === 403) {
         const errorMsg = err.response.data?.error || err.response.data;
         message = errorMsg || message;
       } else if (err instanceof Error) {
@@ -66,7 +66,7 @@ export const startElection = createAsyncThunk<
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     let message = 'Failed to start election';
-    if (err.response?.status === 400) {
+    if (err.response?.status === 400 || err.response?.status === 403) {
       const errorMsg = err.response.data?.error || err.response.data;
       message = errorMsg || message;
     } else if (err instanceof Error) {
@@ -86,7 +86,7 @@ export const endElection = createAsyncThunk<
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     let message = 'Failed to end election';
-    if (err.response?.status === 400) {
+    if (err.response?.status === 400 || err.response?.status === 403) {
       const errorMsg = err.response.data?.error || err.response.data;
       message = errorMsg || message;
     } else if (err instanceof Error) {
@@ -106,7 +106,7 @@ export const deleteElection = createAsyncThunk<
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     let message = 'Failed to delete election';
-    if (err.response?.status === 400) {
+    if (err.response?.status === 400 || err.response?.status === 403) {
       const errorMsg = err.response.data?.error || err.response.data;
       message = errorMsg || message;
     } else if (err instanceof Error) {

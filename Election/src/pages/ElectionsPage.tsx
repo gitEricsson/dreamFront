@@ -49,8 +49,7 @@ export function ElectionsPage() {
 
   async function onCreate(e: FormEvent) {
     e.preventDefault();
-    if (!title.trim() || !description.trim() || !user || !options.trim())
-      return;
+    if (!title.trim() || !user || !options.trim()) return;
     const optionsArray = options
       .split(',')
       .map((o) => o.trim())
@@ -199,7 +198,6 @@ export function ElectionsPage() {
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   placeholder="Election description"
-                  required
                 />
               </div>
 

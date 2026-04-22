@@ -26,7 +26,7 @@ export const castVote = createAsyncThunk<string, CastVoteInput>(
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       let message = 'Failed to cast vote';
-      if (err.response?.status === 400) {
+      if (err.response?.status === 400 || err.response?.status === 403) {
         try {
           const data =
             typeof err.response.data === 'string'

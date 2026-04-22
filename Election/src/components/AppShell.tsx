@@ -29,11 +29,11 @@ export function AppShell() {
                 </NavLink>
               </>
             ) : null}
-            {!user ? (
+            {/* {!user ? (
               <NavLink to="/auth" className={linkClass}>
                 Login / Register
               </NavLink>
-            ) : null}
+            ) : null} */}
             {user ? (
               <button
                 className="navLink"

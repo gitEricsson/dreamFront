@@ -203,7 +203,7 @@ export function ElectionDetailPage() {
             {!user ? (
               <div className="alert alertError">
                 No voter selected. Set a voter first on the{' '}
-                <Link to="/auth">Login / Register</Link> page.
+                <Link to="/auth">Sign in / Register</Link> page.
               </div>
             ) : (
               <div className="alert">
